@@ -15,7 +15,7 @@ int main(void)
 	for (c1 = 0; c1 < 10; c1++)
 	{
 		putchar(48 + c1);
-		if(c1 == 9)
+		if (c1 == 9)
 		break;
 		putchar(44);
 		putchar(32);
