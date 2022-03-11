@@ -14,14 +14,12 @@ int main(void)
 
 	for (c1 = 0; c1 < 10; c1++)
 	{
-		for (c2 = 0; c2 < 10; c2++)
-		{
-			if (c1 > 0)
-			putchar(48 + c1);
-			putchar(48 + c2);
-			putchar(44);
-			putchar(32);
-		}
+		putchar(48 + c1);
+		if(c1 == 9)
+		break;
+		putchar(44);
+		putchar(32);
 	}
+	putchar(10);
 	return (0);
 }
