@@ -26,7 +26,7 @@ int main(void)
 					putchar(32);
 					putchar(48 + c3);
 					putchar(48 + c4);
-					if ((c1 == c2) == (c3 == c4) && c4 == 9)
+					if (c1 == 9 && c2 == 9 && c3 == 9 && c4 == 9)
 					continue;
 					putchar(44);
 					putchar(32);
