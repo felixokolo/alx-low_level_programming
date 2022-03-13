@@ -18,8 +18,10 @@ int main(void)
 		{
 			for (c3 = 0; c3 < 10; c3++)
 			{
-				for (c4 = c2 + 1; c4 < 10; c4++)
+				for (c4 = 0; c4 < 10; c4++)
 				{
+					if (c1 == c3 && c2 == c4)
+					continue;
 					putchar(48 + c1);
 					putchar(48 + c2);
 					putchar(32);
