@@ -11,13 +11,12 @@
 int main(void)
 {
 	int c1, c2, c3, c4;
-
 	
 	for (c1 = 0; c1 < 10; c1++)
 	{
 		for (c2 = 0; c2 < 10; c2++)
 		{
-			for (c3 = 0; c2 < 10; c3++)
+			for (c3 = 0; c3 < 10; c3++)
 			{
 				for (c4 = 0; c4 < 10; c4++)
 				{
@@ -32,7 +31,6 @@ int main(void)
 					putchar(32);
 				}
 			}
-	
 		}
 	}
 	putchar(10);
