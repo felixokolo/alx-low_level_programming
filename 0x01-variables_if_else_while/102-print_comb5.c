@@ -10,7 +10,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int c1;
+	int c1, c2;
 
 	
 	for (c1 = 0; c1 < 10; c1++)
