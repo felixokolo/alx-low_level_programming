@@ -19,7 +19,7 @@ int main(void)
 		{
 			putchar(48 + c1);
 			putchar(48 + c2);
-			if (c1 == 9 && c2 = 9)
+			if (c1 == 9 && c2 == 9)
 			continue;
 			putchar(44);
 			putchar(32);
