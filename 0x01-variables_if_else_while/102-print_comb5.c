@@ -19,8 +19,8 @@ int main(void)
 			putchar(48 + (c1 / 10));
 			putchar(48 + (c1 % 10));
 			putchar(32);
-			putchar(48 + (C2 / 10));
-			putchar(48 + (C2 % 10));
+			putchar(48 + (c2 / 10));
+			putchar(48 + (c2 % 10));
 			if (c1 == 99 && c2 == 98)
 			continue;
 			putchar(44);
