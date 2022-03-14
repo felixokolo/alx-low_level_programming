@@ -21,7 +21,7 @@ int main(void)
 			putchar(32);
 			putchar(48 + (c2 / 10));
 			putchar(48 + (c2 % 10));
-			if (c1 == 99 && c2 == 98)
+			if (c1 == 98 && c2 == 99)
 			continue;
 			putchar(44);
 			putchar(32);
