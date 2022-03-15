@@ -3,16 +3,16 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * add - Adds 2 numbers a and b
+ * @a: First number
+ * @b: Second number
+ * Return: Sum of a and b
  */
 
-int _islower(int c)
+int add(int a, int b)
 {
 	int r;
 
-	r = (islower(c) > 0) ? 1 : 0;
+	r = a + b;
 	return (r);
 }

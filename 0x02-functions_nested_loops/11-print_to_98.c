@@ -3,16 +3,19 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * print_to_98 - Prints all natural numbers to 98
+ * @c: Number to start count
+ * Return: void
  */
-
-int _islower(int c)
+void print_to_98(int c)
 {
-	int r;
-
-	r = (islower(c) > 0) ? 1 : 0;
-	return (r);
+	while (c != 98)
+	{
+		_putchar('0' + c);
+		_putchar(',');
+		_putchar(' ');
+		c += abs(98 - c) / (98 - c);
+	}
+	_putchar('0' + c);
+	_putchar('\n');
 }

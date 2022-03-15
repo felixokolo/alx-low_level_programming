@@ -3,16 +3,23 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * times_table -Prints the times table from 0 
+ * Return: void
  */
 
-int _islower(int c)
+void times_table(void)
 {
-	int r;
+	int m1, m2;
 
-	r = (islower(c) > 0) ? 1 : 0;
-	return (r);
+	for (m1 = 0; m1 < 10; m1++)
+	{
+		for (m2 = 0; m2 < 10; m2++)
+		{
+			_putchar('0' + m1 * m2);
+			if (m2 < 9)
+			_putchar(',');
+			else
+			_putchar('\n');
+		}
+	}
 }
