@@ -3,16 +3,15 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * print_last_digit - Prints the last digit of a number c
+ * @c: Number to extract its last digit
+ * Return: Value of last digit of c
  */
 
-int _islower(int c)
+int print_last_digit(int c)
 {
 	int r;
 
-	r = (islower(c) > 0) ? 1 : 0;
+	r = c % 10;
 	return (r);
 }

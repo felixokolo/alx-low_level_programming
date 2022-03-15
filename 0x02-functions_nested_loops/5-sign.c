@@ -3,16 +3,31 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * print_sign - Prints the sign of a number n
+ * @n: Number to be tested
+ * Return: 1 (Is positive)
+ * 0 (Is zero)
+ * -1 (is negative)
  */
 
-int _islower(int c)
+int print_sign(int c)
 {
 	int r;
 
-	r = (islower(c) > 0) ? 1 : 0;
+	if (c > 0)
+	{
+		r = 1;
+		_putchar('+');
+	}
+	else if (c == 0)
+	{
+		r = 0;
+		_putchar('0');
+	}
+	else
+	{
+		r = -1;
+		_putchar('-');
+	}}
 	return (r);
 }

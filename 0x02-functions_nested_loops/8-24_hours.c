@@ -3,16 +3,24 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * jack_bauer - : Character to be tested
+ * Return: void
  */
 
-int _islower(int c)
+void jack_bauer(void)
 {
-	int r;
+	int h, m;
+	for (h = 0; h < 24; h++)
+	{
+		for (m = 0; m < 60; m++)
+		{
+			_putchar(h / 10);
+			_putchar(h % 10);
+			_putchar(':');
+			_putchar(m / 10);
+			_putchar(m % 10);
+			_putchar('\n');
+		}
+	}
 
-	r = (islower(c) > 0) ? 1 : 0;
-	return (r);
 }

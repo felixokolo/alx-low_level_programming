@@ -3,16 +3,15 @@
 #include "main.h"
 
 /**
- * _islower - Tests if character is lowercase
- * @c: Character to be tested
- * Return: 1 (Is lower)
- * 0 (Is not lower)
+ * _abs - Returns the absolute value of a number n
+ * @c: Number to be converted to the absolute value
+ * Return: Absolute value of c
  */
 
-int _islower(int c)
+int _abs(int c)
 {
 	int r;
 
-	r = (islower(c) > 0) ? 1 : 0;
+	r = abs(c);
 	return (r);
 }
