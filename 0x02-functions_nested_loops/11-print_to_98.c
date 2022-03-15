@@ -9,13 +9,15 @@
  */
 void print_to_98(int c)
 {
-	while (c != 98)
+	int e = c;
+
+	while (e != 98)
 	{
-		_putchar('0' + c);
+		_putchar('0' + e);
 		_putchar(',');
 		_putchar(' ');
-		c += abs(98 - c) / (98 - c);
+		c += abs(98 - e) / (98 - e);
 	}
-	_putchar('0' + c);
+	_putchar('0' + e);
 	_putchar('\n');
 }
