@@ -13,6 +13,6 @@ int _islower(int c)
 {
 	int r;
 
-	r = islower(c) > 0 ? (1 : 0);
+	r = islower(c) > 0 ? (1:0);
 	return (r);
 }
