@@ -17,9 +17,9 @@ void print_to_98(int c)
 		_putchar(',');
 		_putchar(' ');
 		if (e > 98)
-		e++;
-		else
 		e--;
+		else
+		e++;
 	}
 	_putchar('0' + e);
 	_putchar('\n');
