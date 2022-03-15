@@ -19,7 +19,9 @@ void times_table(void)
 			if (m2 < 9)
 			{
 				_putchar(',');
-				_putchar('\t');
+				_putchar(' ');
+				if (m1 * (m2 + 1) < 9)
+				_putchar(' ');
 			}
 			else
 			_putchar('\n');
