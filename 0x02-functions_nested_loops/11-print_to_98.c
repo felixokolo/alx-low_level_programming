@@ -13,7 +13,7 @@ void print_to_98(int c)
 
 	while (e != 98)
 	{
-		_putchar('0' + e);
+		_printnum(e);	
 		_putchar(',');
 		_putchar(' ');
 		if (e > 98)
@@ -21,6 +21,31 @@ void print_to_98(int c)
 		else
 		e++;
 	}
-	_putchar('0' + e);
+	_printnum(e);
 	_putchar('\n');
+}
+
+/**
+ * _printnum - prints an integer number
+ * @n: number to print
+ * Return: void
+ */
+
+void _printnum(int n)
+{
+	int tmp = abs(n), arr[10], i = 0;
+
+	while (tmp != 0)
+	{
+		arr[i] = tmp % 10;
+		tmp /= 10;
+		i++;
+	}
+	if (n < 0)
+	_putchar('-');
+	while (i > 0)
+	{
+		_putchar('0' + arr[i - 1]);
+		i--;
+	}
 }
