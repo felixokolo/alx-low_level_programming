@@ -20,7 +20,7 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (m1 * (m2 + 1) < 9)
+				if (m1 * (m2 + 1) <= 9)
 				_putchar(' ');
 			}
 			else
