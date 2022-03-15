@@ -1,4 +1,4 @@
-#include <ctype.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 
@@ -12,7 +12,7 @@ int print_last_digit(int c)
 {
 	int r;
 
-	r = c % 10;
+	r = abs(c) % 10;
 	_putchar('0' + r);
 	return (r);
 }

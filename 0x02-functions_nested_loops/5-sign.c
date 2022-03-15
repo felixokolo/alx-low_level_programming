@@ -4,7 +4,7 @@
 
 /**
  * print_sign - Prints the sign of a number n
- * @n: Number to be tested
+ * @c: Number to be tested
  * Return: 1 (Is positive)
  * 0 (Is zero)
  * -1 (is negative)
