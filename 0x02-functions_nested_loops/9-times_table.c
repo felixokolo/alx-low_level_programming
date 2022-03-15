@@ -17,7 +17,10 @@ void times_table(void)
 		{
 			_printnum(m1 * m2);
 			if (m2 < 9)
-			_putchar(',');
+			{
+				_putchar(',');
+				_putchar('\t');
+			}
 			else
 			_putchar('\n');
 		}
