@@ -16,7 +16,10 @@ void print_to_98(int c)
 		_putchar('0' + e);
 		_putchar(',');
 		_putchar(' ');
-		c += abs(98 - e) / (98 - e);
+		if (e > 98)
+		e++;
+		else
+		e--;
 	}
 	_putchar('0' + e);
 	_putchar('\n');

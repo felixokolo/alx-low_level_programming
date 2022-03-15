@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * times_table -Prints the times table from 0 
+ * times_table -Prints the times table from 0
  * Return: void
  */
 
