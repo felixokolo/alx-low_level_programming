@@ -46,7 +46,7 @@ void fibonacci(int n)
 			tmp -= 1e15;
 		}
 		if (ol > 0)
-		printf("%d", ol);
+		printf("%d-", ol);
 		printf("%lu, ", tmp);
 		prev = pres;
 		pres = tmp;
