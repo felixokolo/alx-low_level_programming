@@ -29,22 +29,22 @@ void fibonacci(int n)
 	n -= 2;
 	while (n >= 1)
 	{
-		while (pres > 1e13)
+		while (pres > 1e12)
 		{
 			fol++;
-			pres -= 1e13;
+			pres -= 1e12;
 		}
-		while (prev > 1e13)
+		while (prev > 1e12)
 		{
 			pol++;
-			prev -= 1e13;
+			prev -= 1e12;
 		}
 		tmp = prev + pres;
 		tol = pol + fol;
-		while (tmp > 1e13)
+		while (tmp > 1e12)
 		{
 			tol++;
-			tmp -= 1e13;
+			tmp -= 1e12;
 		}
 		if (tol > 0)
 		printf("%d", tol);
