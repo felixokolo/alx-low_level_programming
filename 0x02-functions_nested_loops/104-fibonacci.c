@@ -29,7 +29,7 @@ void fibonacci(int n)
 	n -= 2;
 	while (n >= 1)
 	{
-		while (pres > 1e12)
+		while (pres > 1.1e12)
 		{
 			fol++;
 			pres -= 1e12;
@@ -48,6 +48,8 @@ void fibonacci(int n)
 		}
 		if (tol > 0)
 		printf("%d", tol);
+		if (tmp < 1e11)
+		putchar('0');
 		printf("%lu", tmp);
 		if (n > 1)
 		printf(", ");
