@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	print_to_98(0);
-	print_to_98(444);
+	print_times_table(100);
+	//print_to_98(444);
 	return (0);
 }
