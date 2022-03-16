@@ -55,5 +55,5 @@ void fibonacci(int n)
 		fol = tol;
 		n--;
 	}
-	printf("%d%lu\n", ol, pres + prev);
+	printf("%d%lu\n", tol, pres + prev);
 }
