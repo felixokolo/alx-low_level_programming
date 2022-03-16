@@ -47,9 +47,11 @@ void fibonacci(int n)
 			tmp -= 1e12;
 		}
 		if (tol > 0)
-		printf("%d", tol);
-		if (tmp < 1e11)
-		putchar('0');
+		{
+			printf("%d", tol);
+			if (tmp < 1e11)
+			putchar('0');
+		}
 		printf("%lu", tmp);
 		if (n > 1)
 		printf(", ");
