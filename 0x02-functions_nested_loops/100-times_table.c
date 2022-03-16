@@ -27,8 +27,6 @@ void print_times_table(int n)
 				if (m1 * (m2 + 1) <= 9)
 				_putchar(' ');
 			}
-			else
-			_putchar('\n');
 		}
 	}
 	else
