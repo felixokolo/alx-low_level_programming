@@ -23,7 +23,7 @@ int main(void)
 void fibonacci(int n)
 {
 	unsigned long int prev = 1, pres = 2, tmp;
-	int ol = 0;
+	int pol = 0, fol = 0, tol = 0;
 
 	printf("%lu, %lu, ", prev, pres);
 	n -= 2;
@@ -31,25 +31,28 @@ void fibonacci(int n)
 	{
 		while (pres > 1e15)
 		{
-			ol++;
+			fol++;
 			pres -= 1e15;
 		}
 		while (prev > 1e15)
 		{
-			ol++;
+			pol++;
 			prev -= 1e15;
 		}
 		tmp = prev + pres;
+		tol = pol + fol;
 		while (tmp > 1e15)
 		{
-			ol++;
+			tol++;
 			tmp -= 1e15;
 		}
-		if (ol > 0)
-		printf("%d-", ol);
+		if (tol > 0)
+		printf("%d-", tol);
 		printf("%lu, ", tmp);
 		prev = pres;
+		pol = fol;
 		pres = tmp;
+		fol = tol;
 		n--;
 	}
 	printf("%d%lu\n", ol, pres + prev);
