@@ -3,6 +3,7 @@
 
 int main(void)
 {
-	printf("%d\n", _isupper('C'));
+	//printf("%d\n", mul(3, 6));
+	print_diagonal(10);
 	return (0);
 }
