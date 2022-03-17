@@ -4,6 +4,7 @@
 int main(void)
 {
 	//printf("%d\n", mul(3, 6));
-	print_diagonal(10);
+	print_square(-8);
+	print_square(0);
 	return (0);
 }
