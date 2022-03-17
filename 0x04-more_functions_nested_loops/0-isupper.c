@@ -3,13 +3,13 @@
 #include "main.h"
 
 /**
- * _isalpha - Tests if character is an alphabet
+ * _isupper - Tests if character is uppercase
  * @c: Character to be tested
- * Return: 1 (Is alpha)
- * 0 (Is not alpha)
+ * Return: 1 (Is upper)
+ * 0 (Is not upper)
  */
 
-int _isalpha(int c)
+int _isupper(int c)
 {
 	int r;
 
