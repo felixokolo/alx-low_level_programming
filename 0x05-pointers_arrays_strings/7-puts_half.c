@@ -14,7 +14,7 @@ void puts_half(char *str)
 
 	len = strlen(str) - 1;
 	i = (len / 2) + 1;
-	while (i < len)
+	while (i <= len)
 	{
 		_putchar(*(str + i));
 		i++;
