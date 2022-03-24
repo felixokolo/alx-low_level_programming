@@ -18,7 +18,7 @@ char *cap_string(char *str)
 
 	while (i < len)
 	{
-		if (isalpha(*(str + i)) && isFirst == true)
+		if (!isSeparator(*(str + i)) && isFirst == true)
 		{
 			*(str + i) = toupper(*(str + i));
 			isFirst = false;
