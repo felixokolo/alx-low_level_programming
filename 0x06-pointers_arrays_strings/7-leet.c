@@ -11,7 +11,6 @@
 char *leet(char *str)
 {
 	int i, len;
-	bool isFirst = true;
 
 	i = 0;
 	len = strlen(str);
