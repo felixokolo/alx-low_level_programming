@@ -20,7 +20,7 @@ char *leet(char *str)
 		*(str + i) = convert_leet(*(str + i));
 		i++;
 	}
- 	return (str);
+	return (str);
 }
 
 /**
