@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	char d[50] = "Father happy is coming to. this town";
+	char d[50] = "Father 6happy is coming to. this town";
 	//char s[] = "Day is coming";
 	
 	//int r = _strcmp(d, s);
@@ -12,6 +12,6 @@ int main(void)
 	//reverse_array(d, 6);
 	//printf("%d\n", d[0]);
 	//printf("comparison between %s and %s is %d\n", d, s, r);
-	printf("%s\n", cap_string(d));
+	printf("%s\n", leet(d));
 	return (0);
 }
