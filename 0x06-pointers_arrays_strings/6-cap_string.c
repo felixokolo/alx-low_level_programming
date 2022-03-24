@@ -46,7 +46,7 @@ bool isSeparator(char c)
 		'!', '?', '"', '(', ')', '{', '}'};
 	int i = 0;
 
-	for (i = 0; i < sizeof(sep) / sizeof(char); i++)
+	for (i = 0; i < (int)(sizeof(sep) / sizeof(char)); i++)
 	{
 		if (sep[i] == c)
 		return (true);
