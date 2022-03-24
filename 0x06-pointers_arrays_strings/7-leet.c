@@ -17,7 +17,7 @@ char *leet(char *str)
 
 	while (i < len)
 	{
-		*(str + i) = convert_leet(tolower(*(str + i)));
+		*(str + i) = convert_leet(*(str + i));
 		i++;
 	}
  	return (str);
@@ -37,7 +37,7 @@ char convert_leet(char c)
 
 	for (i = 0; i < (int)(sizeof(ch) / sizeof(char)); i++)
 	{
-		if (ch[i] == c)
+		if (ch[i] == tolower(c))
 		return (lt[i]);
 	}
 
