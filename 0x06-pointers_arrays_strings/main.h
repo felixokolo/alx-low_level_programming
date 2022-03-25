@@ -13,3 +13,4 @@ bool isSeparator(char);
 char convert_leet(char);
 char encode(char);
 char *rot13(char *);
+void print_number(int);
