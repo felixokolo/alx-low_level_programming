@@ -9,22 +9,23 @@
  */
 void print_number(int n)
 {
-	int tmp = abs(n), arr[10], i = 0;
+	int tmp = abs(n), i = 0, j = 0;
 
 	if (n == 0)
 	_putchar('0');
 	else
-	while (tmp != 0)
+	while (tmp >= 10)
 	{
-		arr[i] = tmp % 10;
 		tmp /= 10;
 		i++;
 	}
 	if (n < 0)
 	_putchar('-');
+	tmp = abs(n);
 	while (i > 0)
 	{
-		_putchar('0' + arr[i - 1]);
+		_putchar('0' + tmp / (10 * i));
 		i--;
 	}
+	_putchar('0' + tmp % 10);
 }
