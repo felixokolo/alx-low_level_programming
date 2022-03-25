@@ -9,7 +9,7 @@
  */
 void print_number(int n)
 {
-	int tmp = abs(n), i = 0, j = 0;
+	int tmp = abs(n), i = 0;
 
 	if (n == 0)
 	_putchar('0');
