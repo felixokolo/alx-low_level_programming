@@ -2,14 +2,20 @@
 #include "main.h"
 
 /**
- * _memcpy - copies memory area
- * @dest: pointer to memory to set
- * @src: pointer to memory to copy from
+ * _memset - copies memory area
+ * @s: pointer to memory to set
+ * @b: pointer to memory to copy from
  * @n: number of bytes to copy
  * Return: pointer to dest which golds concatenated string
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	return (memcpy(dest, src, n));
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		*(s + i) = b;
+	}
+	return (s);
 }
