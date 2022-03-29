@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
- * _strpbrk - copies memory area
+ * _strstr - copies memory area
  * @haystack: pointer to memory to set
  * @needle: pointer to memory to copy from
  * Return: pointer to dest which golds concatenated string
  */
 
-char *_strpbrk(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, j = 0;
 	char *pos = NULL;
