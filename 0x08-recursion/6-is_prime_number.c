@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * is_prime_mumber - copies memory area
+ * is_prime_number - copies memory area
  * @n: pointer to memory to set
  * Return: factorial of n
  */
