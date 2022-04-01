@@ -3,6 +3,9 @@
 #include <stdlib.h>
 /* more headers goes there */
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused"
+
 /**
  * main - Entry point
  *
