@@ -3,9 +3,6 @@
 #include <stdlib.h>
 /* more headers goes there */
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wunused"
-
 /**
  * main - Entry point
  *
@@ -13,7 +10,8 @@
  */
 
 /* betty style doc for function main goes there */
-int main(int argc, char *argv[])
+
+int main(int __attribute__ ((unused)) argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
 }
