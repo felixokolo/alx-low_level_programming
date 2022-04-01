@@ -5,7 +5,8 @@
 
 /**
  * main - Entry point
- *
+ * @argc: holds number of variables
+ * @argv: holds command strings 
  * Return: Always 0 (Success)
  */
 
