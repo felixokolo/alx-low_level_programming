@@ -1,26 +1,29 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-/* more headers goes there */
 
 /**
  * main - Entry point
- *
+ * @argc: holds number of variables
+ * @argv: holds command strings
  * Return: Always 0 (Success)
  */
 
-/* betty style doc for function main goes there */
-int main(void)
+int main(int argc, char *argv[])
 {
-	int n;
+	int i, ad = 0, n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n < 0)
-	printf("%d is negative\n", n);
-	if (n == 0)
-	printf("%d is zero\n", n);
-	if (n > 0)
-	printf("%d is positive\n", n);
+	for (i = 1; i < argc; i++)
+	{
+		n = atoi(argv[i]);
+		if (n == 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		ad += n;
+	}
+	printf("%d\n", ad);
 	return (0);
 }
