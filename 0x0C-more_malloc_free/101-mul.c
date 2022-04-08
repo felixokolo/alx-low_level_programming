@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (check_alpha(argv[1]) == 1 ||
 		check_alpha(argv[2]) == 1)
-	{	
+	{
 		printf("Error\n");
 		exit(98);
 	}
