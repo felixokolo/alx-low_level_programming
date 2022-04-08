@@ -40,9 +40,7 @@ int main(void)
 {
     char *a;
 
-    a = _calloc(98, sizeof(char));
-    strcpy(a, "Best");
-    strcpy(a + 4, " School! :)\n");
+    a = _calloc(98, sizeof(int));
     simple_print_buffer(a, 98);
     free(a);
     return (0);
