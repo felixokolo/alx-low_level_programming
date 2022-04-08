@@ -27,5 +27,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		*(r + i * size) = 0;
 	}
 
-	return ((void *)r);
+	return (r);
 }
