@@ -1,21 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "variadic_functions.h"
 
 /**
- * print_strings - Function that prints its parameter
- * @separator: first arg
- * @n: number of strings
+ * print_all - Function that prints its parameter
+ * @format: first arg
  * Return: void
  */
 
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i, n;
 	char *s;
 	va_list ap;
 
-	va_start(ap, n);
+	va_start(ap, format);
+	n = strlen(format);
 
 	for (i = 0; i < n; i++)
 	{
@@ -26,8 +27,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("%s", s);
 		if (i == n - 1)
 		continue;
-		if (separator != NULL)
-		printf("%s", separator);
 	}
 	va_end(ap);
 	printf("\n");
