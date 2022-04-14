@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < a; i++)
 	{
-		printf("%.2x", *(unsigned char *) (fun + i));
+		printf("%.2x", *(unsigned char *) (fun++));
 		if (i == a)
 		continue;
 		printf(" ");
