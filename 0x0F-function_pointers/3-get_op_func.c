@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  *get_op_func - returns the sum of a and b.
@@ -18,6 +19,9 @@ op_t ops[] = {
 		{NULL, NULL}
 	};
 	int i = 0;
+
+	if (strlen(s) > 1)
+	return (NULL);
 
 	while (i < 5)
 	{
