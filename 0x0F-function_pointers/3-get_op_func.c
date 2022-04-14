@@ -3,9 +3,9 @@
 #include <string.h>
 
 /**
- *get_op_func - returns the sum of a and b.
- *@s: operand
- *Return - Pointer
+ * get_op_func - returns the sum of a and b.
+ * @s: operand
+ * Return: Pointer
  */
 
 int (*get_op_func(char *s))(int, int)
