@@ -11,9 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int a, i;
-	int (*fun)(int, char **);
-
-	fun = main;
+	int (*fun)(int, char **) = main;
 
 	a = atoi(argv[1]);
 	if (argc != 2)
