@@ -11,14 +11,17 @@
 int main(int argc, char *argv[])
 {
 	int a, i;
-	int (*fun)(int, char **) = main;
+	int (*fun)(int, char **);
 
-	a = atoi(argv[1]);
+	fun = main;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
+
+	a = atoi(argv[1]);
 
 	if (a < 0)
 	{
@@ -28,7 +31,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < a; i++)
 	{
-		printf("%.2x", *(unsigned char *) (fun++));
+		printf("%.2x", *(unsigned char *) (fun + i));
 		if (i == a)
 		continue;
 		printf(" ");
