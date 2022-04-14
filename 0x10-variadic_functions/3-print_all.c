@@ -16,6 +16,7 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 	n = strlen(format);
+	n++;
 
 	va_end(ap);
 	printf("\n");
