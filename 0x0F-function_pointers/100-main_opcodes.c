@@ -10,24 +10,24 @@
 
 int main(int argc, char *argv[])
 {
-        int a, i;
-        int (*fun)(int, char **);
+	int a, i;
+	int (*fun)(int, char **);
 
 	fun = main;
+
 	a = atoi(argv[1]);
+	if (argc != 2)
+	{
+		exit(98);
+	}
 
-        if (argc != 2)
-        {
-            exit(98);
-        }
-
-        for (i = 0; i < a; i++)
-        {
-        	printf("%.2x", *(unsigned char *) (fun + i));
+	for (i = 0; i < a; i++)
+	{
+		printf("%.2x", *(unsigned char *) (fun + i));
 		if (i == a)
 		continue;
 		printf(" ");
 	}
 	printf("\n");
-        return (0);
+	return (0);
 }
