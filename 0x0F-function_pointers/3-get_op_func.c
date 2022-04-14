@@ -22,7 +22,7 @@ op_t ops[] = {
 	while (i < 5)
 	{
 		if (*((ops[i]).op) == *s)
-		return *ops[i].f;
+		return (*ops[i].f);
 		i++;
 	}
 
