@@ -20,9 +20,6 @@ op_t ops[] = {
 	};
 	int i = 0;
 
-	if (strlen(s) > 1)
-	return (NULL);
-
 	while (i < 5)
 	{
 		if (*((ops[i]).op) == *s)
