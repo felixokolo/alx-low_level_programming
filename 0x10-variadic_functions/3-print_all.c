@@ -63,12 +63,5 @@ void print_float(va_list *ap)
 
 void print_str(va_list *ap)
 {
-	char *s;
-
-	s = va_arg(*ap, char *);
-
-	if (s != NULL)
-	printf("%s", s);
-	else
-	printf("(nil)");
+	printf("%s", va_arg(*ap, char *));
 }
