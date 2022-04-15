@@ -11,14 +11,13 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int n, len, pos;
-	char *s = "cifs", *sp = "cdfs";
+	int n, pos = 0, p = 0;
+	char *s = "cifs";
 	va_list ap;
-	void (*funcs[])(va_list *);
+
+	void (*funcs[])(va_list *) = {print_char, print_int, print_float, print_str};
 
 	va_start(ap, format);
-	len = strlen(format);
-	funcs = {print_char, print_int, print_float, print_str};
 	n = 0;
 
 	while (*(format + n) != '\0')
@@ -26,29 +25,19 @@ void print_all(const char * const format, ...)
 		pos = check_format(*(format + n), s);
 		if (pos >= 0)
 		{
+			if (p > 0)
+			printf(", ");
+
 			funcs[pos](&ap);
+			p = 1;
 		}
 		n++;
 	}
-			
-
-
 
 	va_end(ap);
 	printf("\n");
 }
 
-/**
- * check_format - checks if character is a valid specifier
- * @c: character to check
- * Return: 1 or 0
- */
-
-int check_format(char c, char *s)
-{
-	int n, len;
-
-	len = strlen(s);
 	n = 0;
 
 	while (*(s + n) != '\0')
@@ -69,7 +58,7 @@ int check_format(char c, char *s)
 
 void print_char(va_list *ap)
 {
-	printf("%c ", va_arg(*ap, char);
+	printf("%c", va_arg(*ap, int));
 }
 
 /**
@@ -80,7 +69,7 @@ void print_char(va_list *ap)
 
 void print_int(va_list *ap)
 {
-	printf("%d ", va_arg(*ap, int);
+	printf("%d", va_arg(*ap, int));
 }
 /**
  * print_str - prints character
@@ -90,7 +79,12 @@ void print_int(va_list *ap)
 
 void print_str(va_list *ap)
 {
-	printf("%s ", va_arg(*ap, char *);
+	char *s;
+	s = va_arg(*ap, char *);
+	if (s != NULL)
+	printf("%s", s);
+	else
+	printf("(nil)");
 }
 /**
  * print_float - prints character
@@ -100,5 +94,5 @@ void print_str(va_list *ap)
 
 void print_float(va_list *ap)
 {
-	printf("%f ", va_arg(*ap, float);
+	printf("%f", va_arg(*ap, double));
 }
