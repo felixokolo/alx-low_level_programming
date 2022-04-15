@@ -88,6 +88,6 @@ void print_float(va_list *ap)
 void print_str(va_list *ap)
 {
 	char *cs =  va_arg(*ap, char *);
-	
+
 	printf("%s", cs);
 }
