@@ -29,22 +29,17 @@ void print_all(const char * const format, ...)
 		{
 			if (c == *(s + m))
 			{
-				pos = m;
+				if (p > 0)
+				printf(", ");
+
+				funcs[pos](&ap);
+				p = 1;
 				break;
 			}
 
 			m++;
 		}
 
-
-		if (pos >= 0)
-		{
-			if (p > 0)
-			printf(", ");
-
-			funcs[pos](&ap);
-			p = 1;
-		}
 		n++;
 	}
 
