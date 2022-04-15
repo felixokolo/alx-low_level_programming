@@ -11,8 +11,8 @@
 
 void print_all(const char * const format, ...)
 {
-	int n, pos = 0, p = 0;
-	char *s = "cifs";
+	int n, m, pos = 0, p = 0;
+	char *s = "cifs", c;
 	va_list ap;
 
 	void (*funcs[])(va_list *) = {print_char, print_int, print_float, print_str};
@@ -22,7 +22,21 @@ void print_all(const char * const format, ...)
 
 	while (*(format + n) != '\0')
 	{
-		pos = check_format(*(format + n), s);
+		m = 0;
+		pos = -1;
+		c = *(format + n);
+		while (*(s + m) != '\0')
+		{
+			if (c == *(s + n))
+			{
+				pos = m;
+				break;
+			}
+
+			m++;
+		}
+
+
 		if (pos >= 0)
 		{
 			if (p > 0)
@@ -36,18 +50,6 @@ void print_all(const char * const format, ...)
 
 	va_end(ap);
 	printf("\n");
-}
-
-	n = 0;
-
-	while (*(s + n) != '\0')
-	{
-		if (c == *(s + n))
-		return (n);
-
-		n++;
-	}
-	return (-1);
 }
 
 /**
