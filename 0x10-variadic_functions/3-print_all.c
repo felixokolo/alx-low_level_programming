@@ -12,7 +12,7 @@
 void print_all(const char * const format, ...)
 {
 	int n, m, p = 0;
-	char *s = "cifs", c;
+	char *s = "cifs";
 	va_list ap;
 
 	void (*funcs[])(va_list *) = {print_char, print_int, print_float, print_str};
@@ -23,10 +23,9 @@ void print_all(const char * const format, ...)
 	while (*(format + n) != '\0')
 	{
 		m = 0;
-		c = *(format + n);
 		while (*(s + m) != '\0')
 		{
-			if (c == *(s + m))
+			if (*(format + n) == *(s + m))
 			{
 				if (p > 0)
 				printf(", ");
