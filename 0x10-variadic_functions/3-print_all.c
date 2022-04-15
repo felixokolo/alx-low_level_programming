@@ -44,24 +44,4 @@ void print_int(va_list *ap)
  * Return: void
  */
 
-void print_str(va_list *ap)
-{
-	char *s;
 
-	s = va_arg(*ap, char *);
-
-	if (s != NULL)
-	printf("%s", s);
-	else
-	printf("(nil)");
-}
-/**
- * print_float - prints character
- * @ap: character to be printed
- * Return: void
- */
-
-void print_float(va_list *ap)
-{
-	printf("%f", va_arg(*ap, double));
-}
