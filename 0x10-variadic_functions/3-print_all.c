@@ -11,38 +11,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int n, m, p = 0;
-	char *s = "cifs";
-	va_list ap;
 
-	void (*funcs[])(va_list *) = {print_char, print_int, print_float, print_str};
-
-	va_start(ap, format);
-	n = 0;
-
-	while (*(format + n) != '\0')
-	{
-		m = 0;
-		while (*(s + m) != '\0')
-		{
-			if (*(format + n) == *(s + m))
-			{
-				if (p > 0)
-				printf(", ");
-
-				funcs[m](&ap);
-				p = 1;
-				break;
-			}
-
-			m++;
-		}
-
-		n++;
-	}
-
-	va_end(ap);
-	printf("\n");
 }
 
 /**
