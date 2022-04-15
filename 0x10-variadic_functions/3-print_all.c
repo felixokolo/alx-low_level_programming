@@ -11,7 +11,7 @@
 
 void print_all(const char * const format, ...)
 {
-	int n, m, pos = 0, p = 0;
+	int n, m, p = 0;
 	char *s = "cifs", c;
 	va_list ap;
 
@@ -23,7 +23,6 @@ void print_all(const char * const format, ...)
 	while (*(format + n) != '\0')
 	{
 		m = 0;
-		pos = -1;
 		c = *(format + n);
 		while (*(s + m) != '\0')
 		{
@@ -32,7 +31,7 @@ void print_all(const char * const format, ...)
 				if (p > 0)
 				printf(", ");
 
-				funcs[pos](&ap);
+				funcs[m](&ap);
 				p = 1;
 				break;
 			}
