@@ -11,6 +11,5 @@ void print_char(va_list *);
 void print_int(va_list *);
 void print_str(va_list *);
 void print_float(va_list *);
-int check_format(char, char *);
 
 #endif

@@ -27,7 +27,7 @@ void print_all(const char * const format, ...)
 		c = *(format + n);
 		while (*(s + m) != '\0')
 		{
-			if (c == *(s + n))
+			if (c == *(s + m))
 			{
 				pos = m;
 				break;
@@ -82,7 +82,9 @@ void print_int(va_list *ap)
 void print_str(va_list *ap)
 {
 	char *s;
+
 	s = va_arg(*ap, char *);
+
 	if (s != NULL)
 	printf("%s", s);
 	else
