@@ -11,19 +11,25 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int n, len;
+	unsigned int n, len, pos;
 	char *s = "cifs", *sp = "cdfs";
 	va_list ap;
-	void (*funcs[])(void *c
+	void (*funcs[])(va_list *);
 
 	va_start(ap, format);
 	len = strlen(format);
+	funcs = {print_char, print_int, print_float, print_str};
 	n = 0;
 
 	while (*(format + n) != '\0')
 	{
-		if (check_format(*(format + n), s) >= 0)
+		pos = check_format(*(format + n), s);
+		if (pos >= 0)
 		{
+			funcs[pos](&ap);
+		}
+		n++;
+	}
 			
 
 
@@ -64,4 +70,35 @@ int check_format(char c, char *s)
 void print_char(va_list *ap)
 {
 	printf("%c ", va_arg(*ap, char);
+}
+
+/**
+ * print_int - prints character
+ * @ap: character to be printed
+ * Return: void
+ */
+
+void print_int(va_list *ap)
+{
+	printf("%d ", va_arg(*ap, int);
+}
+/**
+ * print_str - prints character
+ * @ap: character to be printed
+ * Return: void
+ */
+
+void print_str(va_list *ap)
+{
+	printf("%s ", va_arg(*ap, char *);
+}
+/**
+ * print_float - prints character
+ * @ap: character to be printed
+ * Return: void
+ */
+
+void print_float(va_list *ap)
+{
+	printf("%f ", va_arg(*ap, float);
 }
