@@ -67,11 +67,6 @@ void print_int(va_list *ap)
 {
 	printf("%d", va_arg(*ap, int));
 }
-/**
- * print_str - prints character
- * @ap: character to be printed
- * Return: void
- */
 
 /**
  * print_float - prints character
@@ -93,5 +88,6 @@ void print_float(va_list *ap)
 void print_str(va_list *ap)
 {
 	char *cs =  va_arg(*ap, char *);
+	
 	printf("%s", cs);
 }
