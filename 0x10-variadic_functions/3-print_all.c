@@ -11,7 +11,10 @@
 
 void print_all(const char * const format, ...)
 {
+	int len;
 
+	len = strlen(format);
+	len++;
 }
 
 /**
