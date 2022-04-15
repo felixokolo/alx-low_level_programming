@@ -27,8 +27,12 @@ void print_all(const char * const format, ...)
 		{
 			if (*(format + n) == *(s + m))
 			{
-				if (p > 0)
-				printf(", ");
+				switch (p)
+				{
+					case 1:
+						printf(", ");
+						break;
+				}
 
 				funcs[m](&ap);
 				p = 1;
