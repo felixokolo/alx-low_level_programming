@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * print_list -  function that prints
- * all the elements of a list_t
+ * list_len -  function that returns
+ * the lenght of a linked list
  * @h: pointer to list to print
  * Return: number of nodes
  */
@@ -17,7 +17,6 @@ size_t list_len(const list_t *h)
 
 	while (tmp != NULL)
 	{
-		printf("[%u] %s\n", tmp->len, tmp->str);
 		tmp = tmp->next;
 		n++;
 	}
