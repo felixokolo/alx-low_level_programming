@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * list_len -  function that adds
+ * add_node -  function that adds
  * a new node at the beginning of a list_t list.
- * @head: pointer to the head of the list 
+ * @head: pointer to the head of the list
+ * @str: element to add
  * Return: pointer to the new head
  */
 
