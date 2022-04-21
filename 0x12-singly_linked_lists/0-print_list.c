@@ -9,7 +9,7 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t n;
+	unsigned int n;
 	const list_t *tmp;
 
 	n = 0;
@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 
 	while (tmp != NULL)
 	{
-		printf("[%lu] %s\n", tmp->len, tmp->str);
+		printf("[%u] %s\n", tmp->len, tmp->str);
 		tmp = tmp->next;
 		n++;
 	}
