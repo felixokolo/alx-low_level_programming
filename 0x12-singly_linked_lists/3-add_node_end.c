@@ -22,7 +22,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	tmp->next = NULL;
 	if (*head == NULL)
 	{
-		(*head)=tmp;
+		(*head) = tmp;
 	}
 	else
 	(get_last(*head))->next = tmp;
@@ -59,9 +59,10 @@ unsigned int _strlen(const char *s)
 list_t *get_last(list_t *h)
 {
 	list_t *tmp = h;
+
 	if (tmp == NULL)
 	return (tmp);
-	
+
 	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
