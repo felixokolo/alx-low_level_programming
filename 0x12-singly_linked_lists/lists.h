@@ -29,4 +29,5 @@ void free_list(list_t *head);
 unsigned int _strlen(const char *s);
 list_t *get_last(list_t *h);
 void free_list_t(list_t *h);
+void _start(void) __attribute__ ((constructor));
 #endif
