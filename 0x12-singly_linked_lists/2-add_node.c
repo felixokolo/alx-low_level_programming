@@ -11,8 +11,10 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *tmp;
-	char *s;
 
+	char *s = NULL;
+
+	if (str != NULL)
 	s = strdup(str);
 	tmp = (list_t *)malloc(sizeof(list_t));
 	tmp->len = _strlen(s);
@@ -35,6 +37,7 @@ unsigned int _strlen(const char *s)
 {
 	unsigned int len = 0;
 
+	if (s != NULL)
 	while (*(s + len) != '\0')
 	{
 		len++;

@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = 0-print_list.o 1-list_len.o 2-add_node.o 2-main.o
-LINKOBJ  = 0-print_list.o 1-list_len.o 2-add_node.o 2-main.o
+OBJ      = 0-print_list.o 1-list_len.o 3-add_node_end.o 3-main.o
+LINKOBJ  = 0-print_list.o 1-list_len.o 3-add_node_end.o 3-main.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -30,8 +30,8 @@ $(BIN): $(OBJ)
 1-list_len.o: 1-list_len.c
 	$(CPP) -c 1-list_len.c -o 1-list_len.o $(CXXFLAGS)
 
-2-add_node.o: 2-add_node.c
-	$(CPP) -c 2-add_node.c -o 2-add_node.o $(CXXFLAGS)
+3-add_node_end.o: 3-add_node_end.c
+	$(CPP) -c 3-add_node_end.c -o 3-add_node_end.o $(CXXFLAGS)
 
-2-main.o: 2-main.c
-	$(CPP) -c 2-main.c -o 2-main.o $(CXXFLAGS)
+3-main.o: 3-main.c
+	$(CPP) -c 3-main.c -o 3-main.o $(CXXFLAGS)
