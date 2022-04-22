@@ -1,4 +1,3 @@
-#inclide <stdio.h>
 #include "lists.h"
 
 void _start(void) __attribute__ ((constructor));
