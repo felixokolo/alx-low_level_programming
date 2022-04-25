@@ -1,0 +1,7 @@
+.*
+*.out
+*.o
+*.dev
+*.layout
+*.win
+!.gitignore
