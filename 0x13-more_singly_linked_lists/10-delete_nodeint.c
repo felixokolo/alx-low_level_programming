@@ -10,6 +10,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *tmp, *tmp2;
 	int ret = -1;
 
+	if (head == NULL)	
+	return (ret);
 	if (*head == NULL)
 	return (ret);
 	tmp = *head;
@@ -37,7 +39,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 }
 
 /**
- * get_node- gets the node at specified index of a list.
+ * get_node1- gets the node at specified index of a list.
  * @head: pointer to list
  * @index: the of node
  * Return: pointer to the node at specified index
