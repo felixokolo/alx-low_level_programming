@@ -31,4 +31,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
 listint_t *get_last(listint_t *h);
 listint_t *get_node(listint_t *head, unsigned int index);
+listint_t *get_node1(listint_t *head, unsigned int index);
 #endif
