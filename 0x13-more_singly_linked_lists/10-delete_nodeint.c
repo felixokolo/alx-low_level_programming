@@ -7,26 +7,31 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *tmp;
+	listint_t *tmp, *tmp2;
 	int ret = -1;
 
 	if (*head == NULL)
 	return (ret);
 	tmp = *head;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-	return (ret);
-
-	*head = get_node(*head, idx - 1);
-	if ((*head) == NULL)
+	if (index > 0)
 	{
-		return (ret);
-	}
+		tmp = get_node(*head, index - 1);
+		if (tmp == NULL)
+		{
+			return (ret);
+		}
 
-	tmp = (*head)->next;
-	(*head)->next = tmp->next;
-	free(tmp);
+		tmp2 = tmp->next;
+		tmp->next = tmp2->next;
+		free(tmp2);
+	}
+	else
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp);
+	}
 	ret = 0;
 	return (ret);
 }
