@@ -33,4 +33,5 @@ listint_t *get_last(listint_t *h);
 listint_t *get_node(listint_t *head, unsigned int index);
 listint_t *get_node1(listint_t *head, unsigned int index);
 size_t print_listint_safe(const listint_t *head);
+size_t free_listint_safe(listint_t **h);
 #endif
