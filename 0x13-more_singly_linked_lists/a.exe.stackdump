@@ -1,0 +1,10 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=004011B1
+eax=00630000 ebx=0062CC7C ecx=2000DAE8 edx=00630004 esi=612CD322 edi=0062CD64
+ebp=0062C9D8 esp=0062C9A0 program=C:\Users\FELIX WORKSTATION\Documents\ALX_course\alx-low_level_programming\0x13-more_singly_linked_lists\a.exe, pid 13332, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0062C9D8  004011B1 (000E0993, FFFC9E78, FFF2E14E, FFF5BABC)
+0062CC58  00401865 (00000001, 0062CC7C, 200000D0, 61009E40)
+0062CD08  61009EA2 (00000000, 0062CD64, 61008DC0, 00000000)
+End of stack trace
