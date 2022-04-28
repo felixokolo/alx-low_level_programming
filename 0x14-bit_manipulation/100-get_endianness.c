@@ -9,4 +9,5 @@ int get_endianness(void)
 
 	if (s > (s + 1))
 		return (1);
+	return (0);
 }
