@@ -2,6 +2,7 @@
 /**
  * free_listint_safe- free's a lisr and sets the head to NULL
  * @head: pointer to list to be freed
+ * Return: size of list
  */
 size_t free_listint_safe(listint_t **head)
 {
