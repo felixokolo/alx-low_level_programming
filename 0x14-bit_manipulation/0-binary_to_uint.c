@@ -9,17 +9,17 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int tmp = 0;
-	int n = 0;
+	int n = 0, c;
 
 	if (b == NULL)
 		return (0);
-	if (check_bin(b) == -1)
+	c = check_bin(b);
+	if (c == -1)
 		return (0);
-	while ((*b + n) != '\0')
+	while (*(b + n) != '\0')
 	{
-		printf("gets here\n");
 		tmp = tmp << 1;
-		tmp += (*b + n) == '0' ? 0 : 1;
+		tmp += *(b + n) == '0' ? 0 : 1;
 		n++;
 	}
 	return (tmp);
@@ -35,9 +35,9 @@ unsigned int binary_to_uint(const char *b)
 int check_bin(const char *s)
 {
 	int n = 0;
-	while ((*s + n) != '\0')
+	while (*(s + n) != '\0')
 	{
-		if((*s + n) == '0' || (*s + n) == '1')
+		if(*(s + n) == '0' || *(s + n) == '1')
 			n++;
 		else
 			return (-1);
