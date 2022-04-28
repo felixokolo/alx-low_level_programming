@@ -31,13 +31,14 @@ unsigned int binary_to_uint(const char *b)
  * @s: string to be checked
  * Return: 1 if binary -1 if not
  */
- 
+
 int check_bin(const char *s)
 {
 	int n = 0;
+
 	while (*(s + n) != '\0')
 	{
-		if(*(s + n) == '0' || *(s + n) == '1')
+		if (*(s + n) == '0' || *(s + n) == '1')
 			n++;
 		else
 			return (-1);
