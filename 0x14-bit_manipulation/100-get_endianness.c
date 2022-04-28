@@ -5,5 +5,8 @@
  */
 int get_endianness(void)
 {
-	
+	char *s = "hello";
+
+	if (s > (s + 1))
+		return (1);
 }
