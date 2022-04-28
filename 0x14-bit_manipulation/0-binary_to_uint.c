@@ -8,5 +8,39 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	
+	unsigned int tmp = 0;
+	int n = 0;
+
+	if (b == NULL)
+		return (0);
+	if (check_bin(b) == -1)
+		return (0);
+	while ((*b + n) != '\0')
+	{
+		printf("gets here\n");
+		tmp = tmp << 1;
+		tmp += (*b + n) == '0' ? 0 : 1;
+		n++;
+	}
+	return (tmp);
+}
+
+
+/**
+ * check_bin - checks if a string is a binary string
+ * @s: string to be checked
+ * Return: 1 if binary -1 if not
+ */
+ 
+int check_bin(const char *s)
+{
+	int n = 0;
+	while ((*s + n) != '\0')
+	{
+		if((*s + n) == '0' || (*s + n) == '1')
+			n++;
+		else
+			return (-1);
+	}
+	return (1);
 }
