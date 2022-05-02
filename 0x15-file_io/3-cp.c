@@ -13,25 +13,25 @@ int main(int argc, char *argv[])
 	int fd_f, fd_t, size_r, size_w;
 	char buffer[BUFF_SIZE];
 
-	if (argc < 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd_t = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 664);
-	if (fd_t < 0)
+	if (fd_t == -1)
 	print_err("Error: Can't write to ", argv[2], 99);
 
 	close_fd(fd_t);
 	fd_f = open(argv[1], O_RDONLY);
-	if (fd_f < 0)
+	if (fd_f == -1)
 	print_err("Error: Can't read from file ", argv[1], 98);
 	fd_t = open(argv[2], O_APPEND | O_WRONLY);
 	size_r = read(fd_f, buffer, BUFF_SIZE);
 
 	do {
 		size_w = write(fd_t, buffer, size_r);
-		if (size_w < 0)
+		if (size_w == -1)
 		print_err("Error: Can't write to ", argv[2], 99);
 		size_r = read(fd_f, buffer, BUFF_SIZE);
 	} while (size_r > 0);
@@ -51,7 +51,7 @@ void close_fd(int fd)
 	int closer;
 
 	closer = close(fd);
-	if (closer < 0)
+	if (closer == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);

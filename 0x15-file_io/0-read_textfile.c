@@ -16,16 +16,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	return (0);
 
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 	{
 		return (0);
 	}
 	r_size = read(fd, buffer, letters);
-	if (r_size <= 0)
+	if (r_size == -1)
 	return (0);
 
 	w_size = write(STDOUT_FILENO, buffer, r_size);
-	if (w_size < 0 || w_size != r_size)
+	if (w_size == -1 || w_size != r_size)
 	return (0);
 
 	close(fd);
