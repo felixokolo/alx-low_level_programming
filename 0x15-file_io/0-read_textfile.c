@@ -1,4 +1,4 @@
-#include 'main.h'
+#include "main.h"
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -22,5 +22,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (w_size < 0)
 	return (0);
 
-	return (r_size);
+	return (w_size);
 }

@@ -7,21 +7,18 @@
  *
  * Return: Always 0.
  */
-int main(int argc, char argv[])
+int main(int ac, char **av)
 {
-	int fd_f, fd_t;
+    ssize_t n;
 
-	if (argc < 3)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
-	}
-
-	fd_t = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 664);
-	if (fd_t < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
-		exit(99);
-	}
-	
+    if (ac != 2)
+    {
+        dprintf(2, "Usage: %s filename\n", av[0]);
+        exit(1);
+    }
+    n = read_textfile(av[1], 114);
+    printf("\n(printed chars: %li)\n", n);
+    n = read_textfile(av[1], 1024);
+    printf("\n(printed chars: %li)\n", n);
+    return (0);
 }
