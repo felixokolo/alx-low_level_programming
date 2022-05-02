@@ -4,7 +4,8 @@
 
 /**
  * main - check the code
- *
+ * @argc: number of arguments
+ * @argv: list of arguments
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
@@ -25,17 +26,14 @@ int main(int argc, char *argv[])
 	if (fd_f < 0)
 	print_err("Error: Can't read from file ", argv[1], 98);
 
-	
-	do
-	{
+	do {
 		size_r = read(fd_f, buffer, BUFF_SIZE);
 		if (size_r < 0)
 		print_err("Error: Can't read from file ", argv[1], 98);
 		size_w = write(fd_t, buffer, size_r);
 		if (size_w < 0)
 		print_err("Error: Can't write to ", argv[2], 99);
-		
-	}while (size_r > 0);
+	} while (size_r > 0);
 	close_fd(fd_f);
 	close_fd(fd_t);
 	return (0);
@@ -62,7 +60,7 @@ void close_fd(int fd)
 /**
  * print_err - print error
  * @c: error to print
- * @c: error to print
+ * @d: error to print
  * @exi: exit code
  * Return: void
  */
