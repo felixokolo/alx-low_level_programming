@@ -1,6 +1,13 @@
 #include "main.h"
 #include <string.h>
 
+/**
+ * create_file- Create a function that creates a file
+ * @filename: name of file to create
+ * @text_content: a NULL terminated string to write to the file
+ * Return: 1 on success, -1 on failure (file can not be created,
+ * file can not be written, write “fails”, etc…)
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int fd, w_size;
