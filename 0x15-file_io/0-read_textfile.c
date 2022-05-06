@@ -31,9 +31,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		while (letters > BUFF_SIZE || letters > 0)
 		{
+			r_size = read(fd, buffer, (letters > BUFF_SIZE) ? BUFF_SIZE : letters);
 			if (r_size == 0)
 				break;
-			r_size = read(fd, buffer, (letters > BUFF_SIZE) ? BUFF_SIZE : letters);
 			if (r_size == -1)
 			return (0);
 			w_size = write(STDOUT_FILENO, buffer, r_size);
