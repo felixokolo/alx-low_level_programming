@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	do {
 		size_w = write(fd_t, buffer, size_r);
 		if (size_w == -1)
-		print_err("Error: Can't write to ", argv[2], 99);
+		print_err("Error: Can't write to", argv[2], 99);
 		size_r = read(fd_f, buffer, BUFF_SIZE);
 	} while (size_r > 0);
 	close_fd(fd_f);
