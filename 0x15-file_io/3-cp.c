@@ -56,6 +56,8 @@ void close_fd(int fd)
 	if (closer == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		close_fd(fd_f);
+		close_fd(fd_t);
 		exit(100);
 	}
 }
