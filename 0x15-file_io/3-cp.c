@@ -20,12 +20,12 @@ int main(int argc, char *argv[])
 	}
 	fd_t = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_t == -1)
-	print_err("Error: Can't write to ", argv[2], 99);
+	print_err("Error: Can't write to", argv[2], 99);
 
 	close_fd(fd_t);
 	fd_f = open(argv[1], O_RDONLY);
 	if (fd_f == -1)
-	print_err("Error: Can't read from file ", argv[1], 98);
+	print_err("Error: Can't read from file", argv[1], 98);
 	fd_t = open(argv[2], O_APPEND | O_WRONLY);
 	size_r = read(fd_f, buffer, BUFF_SIZE);
 
