@@ -9,7 +9,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, r_size, w_size;
+	int fd, r_size, w_size, total = 0;
 	char buffer[BUFF_SIZE];
 
 	if (filename == NULL)
@@ -31,6 +31,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		while (letters > BUFF_SIZE || letters > 0)
 		{
+			if (r_size == 0)
+				break;
 			r_size = read(fd, buffer, (letters > BUFF_SIZE) ? BUFF_SIZE : letters);
 			if (r_size == -1)
 			return (0);
@@ -38,8 +40,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			if (w_size == -1 || w_size != r_size)
 			return (0);
 			letters -= BUFF_SIZE;
+			total += w_size;
 		}
 	}
 	close(fd);
-	return (w_size);
+	return (total);
 }
