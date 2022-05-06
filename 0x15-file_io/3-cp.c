@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
 		if (size_w == -1)
 		print_err("Error: Can't write to", argv[2], 99);
 		size_r = read(fd_f, buffer, BUFF_SIZE);
+		if (size_r == -1)
+		print_err("Error: Can't read from", argv[1], 98);
 	} while (size_r > 0);
 	close_fd(fd_f);
 	close_fd(fd_t);
