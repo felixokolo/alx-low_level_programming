@@ -1,6 +1,6 @@
 #include "lists.h"
 
-**
+/**
  *add_dnodeint_end-insert node at the end of doubly linked list
  *@head: a ptr to the doubly linked list
  *@n: data
@@ -32,3 +32,4 @@
 		traverse->next = newnode;
 	}
 	return (newnode);
+}
