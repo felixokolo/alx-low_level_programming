@@ -6,7 +6,7 @@
  *@n: data
  *Return: new node address
  */
- dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *newnode, *traverse;
 
