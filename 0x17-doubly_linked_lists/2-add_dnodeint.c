@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *add_dnodeint-insert node at the begining
- *@head: a ptr to the doubly linked list
- *@n: data
- *Return: new node
+ *add_dnodeint-inserts a node at the begining of a list
+ *@head: pointer to first element in list
+ *@n: node data
+ *Return: pointer to new node
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {

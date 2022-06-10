@@ -1,8 +1,9 @@
 #include "lists.h"
 /**
- *sum_dlistint- gives the sum of of all the data.
- *@head: a ptr the dlistint_t list
- *Return: the sum of the data if it is empty 0.
+ *sum_dlistint- function that returns the sum
+ *of all data in a list.
+ *@head: pointer to first element in list
+ *Return: the sum of the data in the given list
  */
 int sum_dlistint(dlistint_t *head)
 {

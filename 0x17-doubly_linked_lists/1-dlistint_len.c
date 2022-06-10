@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *dlistint_len-prints number of elements in doubly linked list
- *@h: the ptr to doubly linked list
- *Return: the number of element in the doubly linked list
+ *dlistint_len-returns the number of elements in a list
+ *@h: pointer to first element in list
+ *Return: number of elements in list
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t counter;
+	size_t cnt;
+	dlistint_t *tmp = h;
 
-	for (counter = 0; h != NULL; counter++)
-		h = h->next;
+	for (cnt = 0; tmp != NULL; cnt++)
+		tmp = tmp->next;
 
-	return (counter);
+	return (cnt);
 }
