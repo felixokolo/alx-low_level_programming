@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "pyfuncs.h"
 
 int add(int a, int b)
