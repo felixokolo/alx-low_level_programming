@@ -50,7 +50,7 @@ void close_fd(int fd)
 	closer = close(fd);
 	if (closer == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		printf("Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -65,6 +65,6 @@ void close_fd(int fd)
 
 void print_err(char *c, char *d, int exi)
 {
-	dprintf(STDERR_FILENO, "%s %s\n", c, d);
+	printf("%s %s\n", c, d);
 	exit(exi);
 }
