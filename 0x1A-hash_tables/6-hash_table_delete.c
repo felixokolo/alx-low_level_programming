@@ -11,6 +11,8 @@ void hash_table_delete(hash_table_t *ht)
 	unsigned long int c;
 	hash_node_t *tmp, *pres;
 
+	if (ht == NULL)
+	return;
 	for (c = 0; c < ht->size; c++)
 	{
 		pres = ht->array[c];
