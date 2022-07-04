@@ -17,21 +17,52 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (0);
 
 	idx = key_index((unsigned char *) key, ht->size);
-
-	new = malloc(sizeof(hash_node_t));
+	new = hash_table_set(ht, key, idx);
 	if (new == NULL)
-	return (0);
-	new->next = NULL;
-	new->key = malloc(sizeof(char) * strlen(key) + 1);
-	strcpy(new->key, key);
-	new->value = malloc(strlen(value) + 2);
-	strcpy(new->value, value);
-	if (ht->array[idx] == NULL)
-	ht->array[idx] = new;
-	else
 	{
-		new->next = ht->array[idx];
+		new = malloc(sizeof(hash_node_t));
+		if (new == NULL)
+		return (0);
+		new->next = NULL;
+		new->key = malloc(sizeof(char) * strlen(key) + 1);
+		strcpy(new->key, key);
+		new->value = malloc(strlen(value) + 1);
+		strcpy(new->value, value);
 		ht->array[idx] = new;
 	}
+	else
+	{
+		ht->array[idx]->key = realloc(ht->array[idx]->value, strlen(value) + 1);
+		strcpy(ht->array[idx]->value, value);
+	}
+
 	return (1);
+}
+
+
+/**
+ * hash_table_search - function that search an element to the hash table
+ * @ht: Hash table
+ * @key: Key to add
+ * @idx: Index of key
+ * Return: Pointer to node success or NULL otherwise
+ */
+
+hash_node_t *hash_table_set(hash_table_t *ht, const char *key, unsigned long int idx)
+{
+	hash_node_t *tmp;
+
+	if (ht->array[idx] == NULL)
+		return (NULL)
+	tmp = ht->array[idx];
+	while (tmp)
+	{
+		if (strcmp(key, tmp->key) == 0)
+		{
+			return (tmp);
+			break;
+		}
+		tmp = tmp->next;
+	}
+	return (NULL);
 }
